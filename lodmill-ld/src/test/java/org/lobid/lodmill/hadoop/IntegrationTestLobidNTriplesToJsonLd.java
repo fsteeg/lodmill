@@ -90,6 +90,8 @@ public class IntegrationTestLobidNTriplesToJsonLd extends
 				result.contains("wgs84_pos#SpatialThing"));
 		assertTrue("Expect resolved contributor name",
 				result.contains("Zayer, Eric"));
+		assertTrue("Expect owner property", result.contains("core#owner"));
+		assertTrue("Expect owner value", result.contains("DE-468"));
 		assertFalse("Unresolved blank node should be filtered",
 				result.contains("preferredNameEntityForThePerson"));
 	}
